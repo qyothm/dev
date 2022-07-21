@@ -113,4 +113,5 @@ const List<String> fiveLetterWords = [
   'wince',
   'whack',
   'wrung',
+  'wring',
 ];
