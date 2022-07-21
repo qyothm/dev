@@ -24,6 +24,7 @@ const List<String> fiveLetterWords = [
   'cynic',
   'crank',
   'crimp',
+  'drama',
   'drink',
   'depot',
   'dodge',
@@ -112,4 +113,5 @@ const List<String> fiveLetterWords = [
   'wince',
   'whack',
   'wrung',
+  'wring',
 ];
