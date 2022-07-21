@@ -127,6 +127,22 @@ class _WordleScreenState extends State<WordleScreen> {
   void _checkIfWinOrLoss() {
     if (_currentWord!.wordString == _solution.wordString) {
       _gameStatus = GameStatus.won;
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          dismissDirection: DismissDirection.none,
+          duration: const Duration(days: 1),
+          backgroundColor: Colors.greenAccent[200],
+          content: const Text(
+            'You Win!',
+            style: TextStyle(color: Colors.white),
+          ),
+          action: SnackBarAction(
+            onPressed: _restart,
+            textColor: Colors.white,
+            label: 'New Game',
+          ),
+        ),
+      );
     } else if (_currentWordIndex + 1 >= _board.length) {
       _gameStatus = GameStatus.lost;
       ScaffoldMessenger.of(context).showSnackBar(
